@@ -14,7 +14,7 @@ function increaseQuantity2(){
    }
    function decreasQuantity3(){
     if(document.getElementById("qty2").value >0){
-      document.getElementById("qty2").value =parseInt(document.getElementById("qty2").value) -1;
+      parseInt(document.getElementById("qty2").value)  -= 1;
       subtotal2();
       total()
     }
@@ -43,7 +43,7 @@ btnmoin.addEventListener('click', decreaseQuantity);
 
 
  function increaseQuantity(){
-document.querySelector(".qty").value =parseInt(document.querySelector(".qty").value) + 1;
+document.querySelector(".qty").value += 1;
 subtotal();
 total();
 
@@ -76,6 +76,7 @@ total();
   let parent= document.querySelector(".body");
   let childs=document.querySelector(".secondline");
   parent.removeChild(childs);
+ 
  }
 
  //boutton like....................................;
@@ -85,7 +86,8 @@ total();
 if(like.style.color =="red"){
   like.style.color ="grey"
 }else{
-
+ like.firstElementChild.setAttribute("class","fa-solid fa-heart");
+ 
   like.style.color ="red"
 }
   
@@ -98,7 +100,7 @@ function aime2(){
   if(like2.style.color =="red"){
     like2.style.color ="grey"
   }else{
-  
+    like2.firstElementChild.setAttribute("class","fa-solid fa-heart");
     like2.style.color ="red"
   }
 }

@@ -1,0 +1,101 @@
+Algorithme moyenne_note
+	Variable
+	Tableau N[378]: réel;
+	sum,M: réel;
+	i : entier;
+	Debut
+	sum<--0;
+	Pour i=0 jusqu'a 318 faire
+	Ecrire("donner la note de l'étudiant",i+1,":");
+	Lire (N[i]);
+	sum +=i;
+	fin Pour
+	M<--sum / 318;
+	Ecrire("moyenne =",M);
+	Fin
+	
+	//----------------------------------------------------------------------------
+	Algorithme: moyenne_maximum_minimum
+	Variable
+	Tableau T[100]: réel;
+	max,min,M,sum: réel;
+	i,n:entier;
+	
+		Debut
+			max<--T[0];
+			min<--T[0];
+			s<--0;
+			
+				Pour i=0 jusqu'a 100 faire
+				Ecrire("entrer le nombre",i+1,":");
+					Lire(T[i]);
+						sum += T[i];
+					Si(T[i]<min)alors
+					min<--T[i];
+					finsi
+					Si(T[i]>max) alors
+					max<-- T[i];
+					finsi
+				
+				fin Pour
+				
+			M <-- sum/100;
+		
+		Ecrire("le maximum = ",max,
+				"le minimum ="min,
+				"la moyenne ="M,);
+		
+		Fin
+//----------------------------------------------------------------------------------------
+Algorithme: moyenne_maximum_minimum
+	Variable
+	Tableau T[100]: réel;
+	max,min : réel;
+	i,n: entier;
+	
+		Debut
+			max<--T[0];
+			min<--T[0];
+			
+				Pour i=0 jusqu'a 100 faire	
+					Si(T[i] < min)alors
+					min<--T[i];
+					finsi
+					Si(T[i]>max) alors
+					max<-- T[i];
+					finsi
+				
+				fin Pour
+		
+		Ecrire("le maximum = ",max,
+				"le minimum ="min,);
+		
+		Fin
+		
+//-------------------------------------------------------------------------------
+Algorithme: note
+	Variable
+	Tableau notes[5,3]: réel;
+	sum,M: réel;
+	i,j: entier;
+	Debut
+	Pour i = 0 jusqu'à 5 faire
+		Pour j=0 jusqu'à 3 faire
+		Ecrire("donner la note de l'étudiant numero",i+1,"dans la matiere ",j+1);
+		Lire ( notes[i,j] );
+		finpour
+	finpour
+			s <-- 0;
+			M <-- 0;
+			Pour i =0 jusqu'à 5 - 1 faire
+			Pour j=0 jusqu'à 3 - 1 faire
+			
+			som<-- som + notes[i,j];
+			finpour
+			M<--som/3;
+			Ecrire("la moyenne de l'étudiant numéro :",i+1,"est :",M);
+			S<--0;
+			finpour
+	
+	Fin
+
